@@ -11,6 +11,8 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/',['as'=>'getPopular','uses'=>'ShopController@getpopular']);
+
+Route::get('/detail', function () {
+    return view('detail2');
 });
